@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Northwind.Domain.Entities
 {
+    [Table("Products")]
     public class Product
     {
         [Key]
@@ -9,16 +11,16 @@ namespace Northwind.Domain.Entities
 
         [Required]
         [MaxLength(40)]
-        public string Name { get; set; }
+        public string Name { get; set; } = default!;
 
         //public Supplier Supplier { get; set; } TODO: Criar entidade Supplier
 
         [Required]
-        public Category Category { get; set; }
+        public Category Category { get; set; } = default!;
 
         [Required]
         [MaxLength(20)]
-        public string QuantityPerUnit { get; set; }
+        public string QuantityPerUnit { get; set; } = default!;
 
         [Required]
         [DataType(DataType.Currency)]
