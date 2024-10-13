@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Northwind.Domain.Entities
 {
+    [Table("Categories")]
     public class Category
     {
         [Key]
@@ -12,14 +13,13 @@ namespace Northwind.Domain.Entities
         [MaxLength(15)]
         [Column("CategoryName")]
         [Required]
-        public string Name { get; set; }
+        public string Name { get; set; } = default!;
 
-        [MaxLength(1073741823)]
         [Required]
-        public string Description { get; set; }
+        public string Description { get; set; } = default!;
 
         [DataType(DataType.Upload)]
         [Required]
-        public byte[] Picture { get;set; }
+        public byte[] Picture { get;set; } = default!;
     }
 }
