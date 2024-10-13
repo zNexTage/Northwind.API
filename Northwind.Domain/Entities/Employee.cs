@@ -72,6 +72,6 @@ namespace Northwind.Domain.Entities
         public byte[] Photo { get; set; } = default!;
 
         [Required]
-        public ICollection<Territory> Territories { get; set; }
+        public ICollection<Territory> Territories { get; set; } = default!;
     }
 }

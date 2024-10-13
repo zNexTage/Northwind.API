@@ -17,11 +17,11 @@ namespace Northwind.Domain.Entities
 
         [Column("CustomerID")]
         [ForeignKey(nameof(Customer))]
-        public Customer Customer { get; set; }
+        public Customer Customer { get; set; } = default!;
 
         [Column("EmployeeID")]
         [ForeignKey(nameof(Employee))]
-        public Employee Employee { get; set; }
+        public Employee Employee { get; set; } = default!;
 
         [DataType(DataType.Date)]
         public DateTime OrderDate { get; set; }
@@ -31,29 +31,29 @@ namespace Northwind.Domain.Entities
 
         [Column("ShipVia")]
         [ForeignKey(nameof(Shipper))]
-        public ICollection<Shipper> Shippers { get; set; }
+        public ICollection<Shipper> Shippers { get; set; } = default!;
 
         [Column("Freight")]
         [DataType(DataType.Currency)]
         public decimal Freight { get; set; }
 
         [MaxLength(40)]
-        public string ShipName { get; set; }
+        public string ShipName { get; set; } = default!;
 
         [MaxLength(60)]
-        public string ShipAddress { get; set; }
+        public string ShipAddress { get; set; } = default!;
 
         [MaxLength(15)]
-        public string ShipCity { get; set; }
+        public string ShipCity { get; set; } = default!;
 
         [MaxLength(15)]
-        public string ShipRegion { get; set; }
+        public string ShipRegion { get; set; } = default!;
 
         [MaxLength(10)]
-        public string ShipPostalCode { get; set; }
+        public string ShipPostalCode { get; set; } = default!;
 
         [MaxLength(15)]
-        public string ShipCountry { get; set; }
+        public string ShipCountry { get; set; } = default!;
 
     }
 }

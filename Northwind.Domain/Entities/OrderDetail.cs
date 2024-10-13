@@ -17,7 +17,7 @@ namespace Northwind.Domain.Entities
 
         [ForeignKey(nameof(Product))]
         [Required]
-        public Product Product { get; set; }
+        public Product Product { get; set; } = default!;
 
         [DataType(DataType.Currency)]
         public decimal UnitPrice { get; set; }
